@@ -29,7 +29,7 @@ jobs:
     - name: Compile code
       run: |
            export GIT_IDENT=$(git rev-parse --short HEAD)
-           cd "10-Aktuelle-OTA-Versionen/01-CANguru-Bridge-Olimex- Version 2.0 large LCD/"
+           cd ./10-Aktuelle-OTA-Versionen/01-CANguru-*LCD/
            platformio project init
            pio run
            # pio run -v -t upload || true # Show all firmware parts and commands
