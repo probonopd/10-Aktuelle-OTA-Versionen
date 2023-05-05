@@ -6,7 +6,7 @@ Using the CANguru Bridge, one can expose the CAN bus of a Märklin "Digital-Ansc
 
 ## Required hardware
 
-The hardware used by the author of the CANguru Bridg is [Olimex ESP32-EVB](https://www.olimex.com/Products/IoT/ESP32/ESP32-EVB/open-source-hardware) but it might also work with generic ESP32 boards connected to a generic CAN bus transceiver such as the SN65HVD230 VP230 (not tested yet).
+The hardware used by the author of the CANguru Bridge is [Olimex ESP32-EVB](https://www.olimex.com/Products/IoT/ESP32/ESP32-EVB/open-source-hardware) but it might also work with generic ESP32 boards connected to a generic CAN bus transceiver such as the SN65HVD230 VP230 (not tested yet).
 
 ## Connections
 
