@@ -14,6 +14,10 @@ The hardware used by the author of the CANguru Bridge is [Olimex ESP32-EVB](http
 
 Source: [CANguru](https://github.com/CANguru-System/91-Discussions/issues/1)
 
-# Credits
+## Credits
 
 https://github.com/CANguru-System/
+
+## Discussions
+
+[Discussions in the upstream project](https://github.com/CANguru-System/91-Discussions/issues)
