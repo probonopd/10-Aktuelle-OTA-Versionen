@@ -460,7 +460,21 @@ void proc2CAN(uint8_t *buffer, CMD dir)
   // can_message_t myMessageToSend = {1, 0x123, 8, {0x01, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x99}}; // geschraubt
   //   can_message_t myMessageToSend = {1, 0x125, 8, {0x01, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x99}};  // frei
   //   can_message_t Message2Send = {0, 0x00, 0x00, {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}};
-  can_message_t Message2Send = {CAN_MSG_FLAG_EXTD | CAN_MSG_FLAG_SS, 0x0000, 0x00, {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}};
+  // can_message_t Message2Send = {CAN_MSG_FLAG_EXTD | CAN_MSG_FLAG_SS, 0x0000, 0x00, {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}};
+  // ^^^ error: braces around scalar initializer for type 'unsigned char:1'
+  can_message_t Message2Send;
+  Message2Send.flags = CAN_MSG_FLAG_EXTD | CAN_MSG_FLAG_SS;
+  Message2Send.id = 0x0000;
+  Message2Send.len = 0x00;
+  Message2Send.data[0] = 0x00;
+  Message2Send.data[1] = 0x00;
+  Message2Send.data[2] = 0x00;
+  Message2Send.data[3] = 0x00;
+  Message2Send.data[4] = 0x00;
+  Message2Send.data[5] = 0x00;
+  Message2Send.data[6] = 0x00;
+  Message2Send.data[7] = 0x00;
+
   // CAN uses (network) big endian format
   // Maerklin TCP/UDP Format: always 13 (CAN_FRAME_SIZE) bytes
   //   byte 0 - 3  CAN ID
